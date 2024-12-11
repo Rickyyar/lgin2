@@ -3,6 +3,7 @@ cleanup() {
     echo "Cleaning up ..."
     deactivate
     rm -rf /home/devasc/Downloads/lgin2/lgin2/loginapp_project
+    rm -rf /home/devasc/Downloads/temp/lgin2/lgin2_venv
     echo "Application folder has been removed"
 }
 trap cleanup EXIT
