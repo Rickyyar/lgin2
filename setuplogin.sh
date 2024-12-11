@@ -1,21 +1,20 @@
 #!/bin/bash
-# staging exercise with jenkins
 cleanup() {
     echo "Cleaning up ..."
     deactivate
-    rm -rf /home/devasc/Documents/Git_testing/deployment/Flaskapp
-    rm -rf /home/devasc/Documents/Git_testing/deployment/flask_venv
+    rm -rf /home/devasc/Downloads/lgin2/lgin2
+    rm -rf /home/devasc/Downloads/lgin2/lgin2_venv
     echo "Application folder has been removed"
 }
 trap cleanup EXIT
 echo "$(date '+%H:%M:%S') - creating python VENV"
-python3 -m venv flask_venv
+python3 -m venv lgin2_venv
 sleep 15  # Pause
 echo "$(date '+%H:%M:%S') - This is the message after a 15-second pause."²
 echo "$(date '+%H:%M:%S')- entering VENV"
-source flask_venv/bin/activate
+source lgin2_venv/bin/activate
 echo "$(date '+%H:%M:%S') - cloning git repository"
-git clone https://github.com/Rickyyar/Flaskapp.git
+git clone https://github.com/Rickyyar/lgin2
 cd Flaskapp/
 pip install -r requirements.txt
 echo "$(date '+%H:%M:%S') - starting python application"
