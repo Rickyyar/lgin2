@@ -2,8 +2,7 @@
 cleanup() {
     echo "Cleaning up ..."
     deactivate
-    rm -rf /home/devasc/Downloads/lgin2/lgin2
-    rm -rf /home/devasc/Downloads/lgin2/lgin2_venv
+    rm -rf /home/devasc/Downloads/lgin2/lgin2/loginapp_project
     echo "Application folder has been removed"
 }
 trap cleanup EXIT
@@ -15,8 +14,8 @@ echo "$(date '+%H:%M:%S')- entering VENV"
 source lgin2_venv/bin/activate
 echo "$(date '+%H:%M:%S') - cloning git repository"
 git clone https://github.com/Rickyyar/lgin2
-cd Flaskapp/
+cd lgin2/
 pip install -r requirements.txt
 echo "$(date '+%H:%M:%S') - starting python application"
-python3 sample_app.py
+python3 app.py
 echo "$(date '+%H:%M:%S') - application stopped"
