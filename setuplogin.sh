@@ -6,7 +6,7 @@ cleanup() {
     rm -rf /home/devasc/Downloads/temp/
     echo "Application folder has been removed"
 }
-#trap cleanup EXIT
+trap cleanup EXIT
 echo "$(date '+%H:%M:%S') - creating python VENV"
 python3 -m venv lgin2_venv
 sleep 15  # Pause
