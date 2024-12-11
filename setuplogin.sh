@@ -13,8 +13,6 @@ sleep 15  # Pause
 echo "$(date '+%H:%M:%S') - This is the message after a 15-second pause."²
 echo "$(date '+%H:%M:%S')- entering VENV"
 source lgin2_venv/bin/activate
-
-cd lgin2/
 pip install -r requirements.txt
 echo "$(date '+%H:%M:%S') - starting python application"
 python3 loginapp_project/app.py
